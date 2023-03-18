@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="bottom"
+
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/hesap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hesaplanacaklar"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="textEnd"
+
+        />
+
+    <TextView
+        android:id="@+id/sonuc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sonuc"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_marginEnd="25dp"
+        android:textAlignment="textEnd"
+        android:maxLines="1"/>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        app:columnCount="4"
+
+
+        >
+
+        <Button
+            android:id="@+id/btn_ac"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_top"
+            android:onClick="getClıcked"
+            android:text="AC"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_sil"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_top"
+            android:onClick="getClıcked"
+            android:text="C"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_yuzde"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_top"
+            android:onClick="getClıcked"
+            android:text="%"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_bolme"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_right"
+            android:onClick="getClıcked"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="7"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_carpma"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_right"
+            android:onClick="getClıcked"
+            android:text="X"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="6"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_cikarma"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_right"
+            android:onClick="getClıcked"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_toplama"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_right"
+            android:onClick="getClıcked"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_0"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:paddingStart="40dp"
+            android:text="0"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnSpan="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <Button
+            android:id="@+id/btn_virgul"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_numeric"
+            android:onClick="getClıcked"
+            android:text=","
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_esittir"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/btn_background_right"
+            android:onClick="getClıcked"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_columnWeight="1" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
