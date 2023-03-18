@@ -4,9 +4,8 @@
 Bu projede viewBinding kullanılarak hesap makinesi yapılmıştır.
 Tasarım olarak ıphone'lardaki hesap makine tasarımı kullanılmıştır.
 bir tek çalışmayan tuş % işareti olan tuştur, o da Toast ile geri bildirim veriyor.
-youtube videosu: https://www.youtube.com/watch?v=NfHJqzMVGcs
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/109176905/226132691-3e5617e4-9feb-4e66-8561-b2fc0f19ab82.gif)
 
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/109176905/226132691-3e5617e4-9feb-4e66-8561-b2fc0f19ab82.gif)
 
 ![Ekran görüntüsü 2023-03-18 213645](https://user-images.githubusercontent.com/109176905/226129631-ea1dbd33-4135-4eed-9633-f0dbc2a9f9b7.png)
 
