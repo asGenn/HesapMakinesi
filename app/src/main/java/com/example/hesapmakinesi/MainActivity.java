@@ -67,16 +67,37 @@ public class MainActivity extends AppCompatActivity {
                 hesaplanacaklar = replaceWith(hesaplanacaklar,"." );
                 break;
             case  R.id.btn_toplama:
-                hesaplanacaklar = replaceWith(hesaplanacaklar,"+" );
+                if(!binding.sonuc.getText().toString().isEmpty()){
+                    hesaplanacaklar = binding.sonuc.getText().toString() + "+";
+                    binding.sonuc.setText("");
+                }else {
+                    hesaplanacaklar = replaceWith(hesaplanacaklar,"+" );
+                }
                 break;
             case  R.id.btn_carpma:
-                hesaplanacaklar = replaceWith(hesaplanacaklar,"*" );
+                if(!binding.sonuc.getText().toString().isEmpty()){
+                    hesaplanacaklar = binding.sonuc.getText().toString() + "*";
+                    binding.sonuc.setText("");
+                }else {
+                    hesaplanacaklar = replaceWith(hesaplanacaklar,"*" );
+                }
+
                 break;
             case  R.id.btn_cikarma:
-                hesaplanacaklar = replaceWith(hesaplanacaklar,"-" );
+                if(!binding.sonuc.getText().toString().isEmpty()){
+                    hesaplanacaklar = binding.sonuc.getText().toString()+ "-";
+                    binding.sonuc.setText("");
+                }else {
+                    hesaplanacaklar = replaceWith(hesaplanacaklar,"-" );
+                }
                 break;
             case  R.id.btn_bolme:
-                hesaplanacaklar = replaceWith(hesaplanacaklar,"/" );
+                if(!binding.sonuc.getText().toString().isEmpty()){
+                    hesaplanacaklar = binding.sonuc.getText().toString() + "/";
+                    binding.sonuc.setText("");
+                }else {
+                    hesaplanacaklar = replaceWith(hesaplanacaklar,"/" );
+                }
 
                 break;
             case  R.id.btn_ac:
@@ -84,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.sonuc.setText("");
                 break;
             case  R.id.btn_yuzde:
+                Toast.makeText(this, "Bu özellik yapım aşamasında", Toast.LENGTH_SHORT).show();
 
                 break;
             case  R.id.btn_sil:
@@ -120,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         binding.btnEsittir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 parseString(binding.hesap.getText().toString());
             }
         });
@@ -139,7 +162,9 @@ public class MainActivity extends AppCompatActivity {
             }
             hesaplaCarpmaVeBolme(strings,integerArrayList);
             hesaplaToplamaVeBolme(strings,integerArrayList);
+
             binding.sonuc.setText(integerArrayList.get(0).toString());
+
         }
     }
     public void hesaplaCarpmaVeBolme(ArrayList<String> strings,ArrayList<Double> doubles){
@@ -174,12 +199,23 @@ public class MainActivity extends AppCompatActivity {
                 strings.remove(i);
                 hesaplaToplamaVeBolme(strings,doubles);
             } else if (strings.get(i).equals("-")) {
-                double a = doubles.get(i) - doubles.get(i+1);
-                doubles.remove(i);
-                doubles.remove(i);
-                doubles.add(i,a);
-                strings.remove(i);
-                hesaplaToplamaVeBolme(strings,doubles);
+                if(doubles.size() == 2 && strings.size() ==2){
+                    double a = - doubles.get(0) -  doubles.get(1);
+                    doubles.clear();
+                    strings.clear();
+                    doubles.add(0,a);
+                    hesaplaToplamaVeBolme(strings,doubles);
+
+                }else{
+                    double a = doubles.get(i) - doubles.get(i+1);
+                    doubles.remove(i);
+                    doubles.remove(i);
+                    doubles.add(i,a);
+                    strings.remove(i);
+                    hesaplaToplamaVeBolme(strings,doubles);
+
+                }
+
             }
 
         }
