@@ -1,9 +1,9 @@
 # HesapMakinesi
 
 
-Bu projede viewBinding kullanılarak hesap makinesi yapılmıştır.
+Bu projede viewBinding kullanılarak bir hesap makinesi yapılmıştır.
 Tasarım olarak ıphone'lardaki hesap makine tasarımı kullanılmıştır.
-bir tek çalışmayan tuş % işareti olan tuştur, o da Toast ile geri bildirim veriyor.
+% özelliği aktif değildir ama geriye bir toast mesajı veriyor.
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/109176905/226132691-3e5617e4-9feb-4e66-8561-b2fc0f19ab82.gif)
 
